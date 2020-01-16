@@ -1,30 +1,29 @@
-contacts = [
-    {
-        "id": 1
-        "first_name": "John",
-        "last_name": "Silver",
-        "email": "john.silver@gmail.com",
-        "cell": "512-991-5491" 
-    }
-]
+from Contact import Contact
 
-def add_contact(f_name, l_name, email, cell):
-    pass
+contacts = []
 
-def delete_contact(id):
-    pass
+def add_contact():
+    print("Please enter contact information")
+    first_name = input("First name: ")
+    last_name = input("Last name: ")
+    phone = input("Phone: ")
+    email = input("Email: ")
 
-def update_name(id, f_name, l_name):
-    pass
+    new_contact = Contact(first_name, last_name, phone, email)
 
-def update_email(id, email):
-    pass
+    contacts.append(new_contact)
 
-def update_cell(id, cell_number):
-    pass
+def display_contacts():
+    for contact in contacts:
+        info = contact.get_info()
 
-def get_all_contacts():
-    pass
+        print("**********")
+        print(contact.get_name())
+        print("**********")
 
-def get_contact(id):
-    pass
+        print("First name: " + contact.first_name)
+        print("Last name: " + contact.last_name)
+        print("Phone: " + contact.phone)
+        print("Email: " + contact.email)
+
+        print("============================")
