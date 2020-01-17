@@ -23,9 +23,10 @@ class ContactBook:
             print(contact.get_name())
             print("**********")
 
-            print("First name: " + contact.first_name)
-            print("Last name: " + contact.last_name)
-            print("Phone: " + contact.phone)
-            print("Email: " + contact.email)
+            print("ID: " + info.id)
+            print("First name: " + info.first_name)
+            print("Last name: " + info.last_name)
+            print("Phone: " + info.phone)
+            print("Email: " + info.email)
 
             print("============================")
