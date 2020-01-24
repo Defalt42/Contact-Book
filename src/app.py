@@ -16,13 +16,18 @@ while True:
 
     option = int(input("What would you like to do? (type a number) >> "))
 
-    if option == 5:
-        break
-
     if option == 1:
         contact_book.display_contacts()
-    if option == 2:
+    elif option == 2:
         contact_book.add_contact()
+    elif option == 3:
+        pass
+    elif option == 4:
+        pass
+    elif option == 5:
+        break
+    else:
+        print("Invalid input, please enter a value from 1 - 5")
 
 
 
