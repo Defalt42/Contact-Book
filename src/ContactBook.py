@@ -4,7 +4,7 @@ class ContactBook:
 
     contacts = []
 
-    def add_contact():
+    def add_contact(self):
         print("Please enter contact information")
         first_name = input("First name: ")
         last_name = input("Last name: ")
@@ -13,20 +13,20 @@ class ContactBook:
 
         new_contact = Contact(first_name, last_name, phone, email)
 
-        contacts.append(new_contact)
+        self.contacts.append(new_contact)
 
-    def display_contacts():
-        for contact in contacts:
+    def display_contacts(self):
+        for contact in self.contacts:
             info = contact.get_info()
 
             print("**********")
             print(contact.get_name())
             print("**********")
 
-            print("ID: " + info.id)
-            print("First name: " + info.first_name)
-            print("Last name: " + info.last_name)
-            print("Phone: " + info.phone)
-            print("Email: " + info.email)
+            print("ID: " + str(info["id"]))
+            print("First name: " + info["first_name"])
+            print("Last name: " + info["last_name"])
+            print("Phone: " + info["phone"])
+            print("Email: " + info["email"])
 
             print("============================")

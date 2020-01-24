@@ -21,6 +21,8 @@ while True:
 
     if option == 1:
         contact_book.display_contacts()
+    if option == 2:
+        contact_book.add_contact()
 
 
 
