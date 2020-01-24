@@ -15,6 +15,10 @@ class ContactBook:
 
         self.contacts.append(new_contact)
 
+    # TODO: Create remove_contact() function
+
+    # TODO: Create update_contact() function
+
     def display_contacts(self):
         for contact in self.contacts:
             info = contact.get_info()
