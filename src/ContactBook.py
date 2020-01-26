@@ -17,6 +17,11 @@ class ContactBook:
 
     # TODO: Create remove_contact() function
 
+    def remove_contact():
+        print("Enter a contact ID. You can find this by displaying all contacts.")
+        contact_id = int(input(">> "))
+
+
     # TODO: Create update_contact() function
 
     def display_contacts(self):
