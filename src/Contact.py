@@ -6,9 +6,6 @@ class Contact:
         self.phone = phone
         self.email = email
     
-    def get_id(self):
-        return id(self)
-    
     def get_name(self):
         return self.first_name + ' ' + self.last_name
     

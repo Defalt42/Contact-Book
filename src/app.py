@@ -19,9 +19,27 @@ while True:
     if option == 1:
         contact_book.display_contacts()
     elif option == 2:
-        contact_book.add_contact()
+        first = input("First name >> ")
+        last = input("Last name >> ")
+        phone = input("Phone number >> ")
+        email = input("Email >> ")
+
+        contact_book.add_contact(first, last, phone, email)
     elif option == 3:
-        pass
+        print("Here is a list of all contacts in your contact book.")
+        contact_book.display_contacts()
+
+        while True:
+            contact_id = int(input("Enter the ID of the contact you would like to remove >> "))
+            
+            if contact_book.remove_contact(contact_id):
+                print("Contact successfully removed!")
+                contact_book.display_contacts()
+                break
+            else:
+                print("Contact does not exist. Try again. ")
+                contact_book.display_contacts()
+                continue
     elif option == 4:
         pass
     elif option == 5:

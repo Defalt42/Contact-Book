@@ -4,25 +4,26 @@ class ContactBook:
 
     contacts = []
 
-    def add_contact(self):
-        print("Please enter contact information")
-        first_name = input("First name: ")
-        last_name = input("Last name: ")
-        phone = input("Phone: ")
-        email = input("Email: ")
+    def add_contact(self, first, last, phone, email):
+        self.contacts.append(Contact(first, last, phone, email))
 
-        new_contact = Contact(first_name, last_name, phone, email)
+    # TODO: Troubleshoot why this returns a valueError (item does not exist in list)
+    def remove_contact(self, contact_id):
+        is_found = False
 
-        self.contacts.append(new_contact)
-
-    # TODO: Create remove_contact() function
-
-    def remove_contact():
-        print("Enter a contact ID. You can find this by displaying all contacts.")
-        contact_id = int(input(">> "))
-
+        for contact in self.contacts:
+            if int(id(contact)) == contact_id:
+                is_found = True
+        
+        if is_found:
+            self.contacts.remove(contact_id)
+            return True
+        else:
+            return False
 
     # TODO: Create update_contact() function
+    def update_contact(self, key, value):
+        pass
 
     def display_contacts(self):
         for contact in self.contacts:
