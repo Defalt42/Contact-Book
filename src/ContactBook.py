@@ -9,17 +9,13 @@ class ContactBook:
 
     # TODO: Troubleshoot why this returns a valueError (item does not exist in list)
     def remove_contact(self, contact_id):
-        is_found = False
 
         for contact in self.contacts:
             if int(id(contact)) == contact_id:
-                is_found = True
+                self.contacts.remove(contact)
+                return True
+        return False
         
-        if is_found:
-            self.contacts.remove(contact_id)
-            return True
-        else:
-            return False
 
     # TODO: Create update_contact() function
     def update_contact(self, key, value):
