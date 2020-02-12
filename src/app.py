@@ -14,7 +14,10 @@ while True:
     print("4) Update a contact")
     print("5) Quit")
 
-    option = int(input("What would you like to do? (type a number) >> "))
+    try:
+        option = int(input("What would you like to do? (type a number) >> "))
+    except ValueError:
+        print("Oops, invalid input. Try entering an integer.")
 
     if option == 1:
         contact_book.display_contacts()
@@ -30,7 +33,10 @@ while True:
         contact_book.display_contacts()
 
         while True:
-            contact_id = int(input("Enter the ID of the contact you would like to remove >> "))
+            try:
+                contact_id = int(input("Enter the ID of the contact you would like to remove >> "))
+            except ValueError:
+                print("Oops, invalid input. Try entering an integer.")
             
             if contact_book.remove_contact(contact_id):
                 print("Contact successfully removed!")
@@ -45,7 +51,7 @@ while True:
     elif option == 5:
         break
     else:
-        print("Invalid input, please enter a value from 1 - 5")
+        print(str(option) + " is not an option, please enter a value from 1 - 5")
 
 
 
