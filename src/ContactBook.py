@@ -4,10 +4,12 @@ class ContactBook:
 
     contacts = []
 
-    def add_contact(self, first, last, phone, email):
-        self.contacts.append(Contact(first, last, phone, email))
+    def get_contact(self, id):
+        pass
 
-    # TODO: Troubleshoot why this returns a valueError (item does not exist in list)
+    def add_contact(self, first, last, phone, email):
+        self.contacts.append(Contact(first, last, phone, email))    
+
     def remove_contact(self, contact_id):
 
         for contact in self.contacts:
