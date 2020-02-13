@@ -47,7 +47,23 @@ while True:
                 contact_book.display_contacts()
                 continue
     elif option == 4:
-        pass
+        print("Here is a list of all contacts in your contact book.")
+        contact_book.display_contacts()
+
+        while True:
+            try:
+                contact_id = int(input("Enter the ID of the contact you would like to update >> "))
+            except ValueError:
+                print("Oops, invalid input. Try entering an integer.")
+            
+            if contact_book.remove_contact(contact_id):
+                print("Contact successfully removed!")
+                contact_book.display_contacts()
+                break
+            else:
+                print("Contact does not exist. Try again. ")
+                contact_book.display_contacts()
+                continue
     elif option == 5:
         break
     else:
